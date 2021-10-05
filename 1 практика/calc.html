@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Калькулятор</title>
+</head>
+<body>
+    
+	<input id="number1" />
+	<div id="btns">
+        <button id="plus" onclick="w='+';onclkEv();">+</button>
+        <button id="minus" onclick="w='-';onclkEv();">-</button>
+        <button id="times" onclick="w='*';onclkEv();">x</button>
+        <button id="divide" onclick="w='/';onclkEv();">:</button>
+      </div>
+	<input id="number2" />
+	<br>
+	<button id="res" onclick="func()" style="visibility:hidden;" >Результат</button>
+    <p id="result"></p>
+    <script>
+        var w;
+        function onclkEv(){
+            if((document.getElementById("number1").value)!=="" && (document.getElementById("number2").value)!==""){
+                document.getElementById("res").style.visibility = "visible";
+            }
+            
+        }
+        
+        function func() {
+          var result;
+          var err;
+          if(!Number(document.getElementById("number1").value) && Number(document.getElementById("number1").value)!==0 
+          || (document.getElementById("number1").value) =="")
+          {
+            err = 1;
+          }
+          if(!Number(document.getElementById("number2").value) && Number(document.getElementById("number2").value)!==0
+          || (document.getElementById("number2").value) =="")
+          {
+            err=2;
+          }
+          if(!Number(document.getElementById("number1").value) && !Number(document.getElementById("number2").value) 
+          && Number(document.getElementById("number1").value)!==0 && Number(document.getElementById("number2").value)!==0
+          || ((document.getElementById("number1").value) =="" && (document.getElementById("number2").value) ==""))
+          {
+              err=3;
+          }
+          var number1 = Number(document.getElementById("number1").value);
+          var number2 = Number(document.getElementById("number2").value);
+          switch (w) {
+            case '+':
+                if(err==1){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в 1 значении");
+                    break;
+                }
+                if(err==2){
+                    result='Исправьте ошибку';
+                    alert("Ошибка во 2 значении ");
+                    break;
+                }
+                if(err==3){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в первом и втором значении");
+                    break;
+                }
+                if(!isFinite(number1 + number2)){
+                        result = "Бесконечность";
+                        alert("Большие числа");
+                        break;
+                    }
+                result = number1 + number2;
+                break;
+            case '-':
+                if(err==1){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в 1 значении");
+                    break;
+                }
+                if(err==2){
+                    result='Исправьте ошибку';
+                    alert("Ошибка во 2 значении ");
+                    break;
+                }
+                if(err==3){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в первом и втором значении");
+                    break;
+                }
+                if(!isFinite(number1 - number2)){
+                        result = "Бесконечность";
+                        alert("Большие числа");
+                        break;
+                    }
+                result = number1 - number2;
+                break;
+            case '*':
+                if(err==1){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в 1 значении");
+                    break;
+                }
+                if(err==2){
+                    result='Исправьте ошибку';
+                    alert("Ошибка во 2 значении ");
+                    break;
+                }
+                if(err==3){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в первом и втором значении");
+                    break;
+                }
+                if(!isFinite(number1 * number2)){
+                        result = "Бесконечность";
+                        alert("Большие числа");
+                        break;
+                    }
+                result = number1 * number2;
+                break;
+            case '/':
+                if(err==1){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в 1 значении");
+                    break;
+                }
+                if(err==2){
+                    result='Исправьте ошибку';
+                    alert("Ошибка во 2 значении ");
+                    break;
+                }
+                if(err==3){
+                    result='Исправьте ошибку';
+                    alert("Ошибка в первом и втором значении");
+                    break;
+                }
+                if(number2===0){
+                    result='Деление на ноль';
+                    alert("Ошибка во 2 значении");
+                    break;
+                }
+                if(!isFinite(number1 / number2)){
+                        result = "Бесконечность";
+                        alert("Большие числа");
+                        break;
+                    }
+                result = number1 / number2;
+                break;
+          }
+          
+          document.getElementById("result").innerHTML = result;
+        }
+      </script>
+</body>
+</html>
