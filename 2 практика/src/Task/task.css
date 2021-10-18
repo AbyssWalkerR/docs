@@ -1,0 +1,59 @@
+.complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      rgb(21, 20, 102) 0%,
+      rgb(74, 13, 82) 100%
+    );
+  
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+
+  .task:nth-child(4n + 1) {
+    background: linear-gradient(
+      90deg,
+      rgb(70, 87, 66) 0%,
+      rgb(32, 40, 46) 100%
+    );
+  }
+  
+  .task:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgb(189, 147, 187) 0%,
+      rgb(75, 28, 28) 100%
+    );
+  }
+  
+  .task:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgb(61, 7, 92) 0%,
+      rgb(9, 12, 153) 100%
+    );
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .delete-icon {
+    margin-right: 5px;
+    color: #fff;
+  }
+  
+  .edit-icon {
+    color: #fff;
+  }

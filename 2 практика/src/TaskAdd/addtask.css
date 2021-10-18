@@ -1,0 +1,46 @@
+.tasks-add {
+    margin-bottom: 32px;
+  }
+
+  .task-input_1,.task-input_2 {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #b8a7e6;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #fff;
+  }
+  
+  .task-input_1::placeholder, .task-input_2::placeholder {
+    color: #e2e2e2;
+  }
+  
+  .task-button {
+    padding: 16px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(184, 167, 230) 0%,
+      rgb(0, 198, 248) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .task-input_1.edit, .task-input_2.edit {
+    border: 2px solid #0bee8f;
+  }
+  
+  .task-button.edit {
+    background: linear-gradient(
+      90deg,
+      rgb(248, 58, 58) 0%,
+      rgb(255, 144, 17) 100%
+    );
+    padding: 16px 22px;
+  }
